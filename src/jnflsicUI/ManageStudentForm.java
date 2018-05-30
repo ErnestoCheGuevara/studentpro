@@ -200,7 +200,7 @@ public class ManageStudentForm extends javax.swing.JFrame {
 
             },
             new String [] {
-                "StudentID", "FirstName", "MiddleName", "LastName", "Sex", "Grade", "BirthDate", "Enrolled Year", "Phone", "Address"
+                "StudentID", "FirstName", "LastName", "StudentNum", "Sex", "Grade", "BirthDate", "Enrolled Year", "Phone", "Address"
             }
         ) {
             Class[] types = new Class [] {
@@ -229,6 +229,9 @@ public class ManageStudentForm extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(2).setResizable(false);
+        }
 
         jLabelBirthdate1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabelBirthdate1.setText("Enrolled Year:");
@@ -265,7 +268,7 @@ public class ManageStudentForm extends javax.swing.JFrame {
         });
 
         jLabelStuID2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabelStuID2.setText("Keyword:");
+        jLabelStuID2.setText("Name/Stunum:");
 
         jLabelStuID3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabelStuID3.setText("Enroll Year/Grade");
@@ -364,7 +367,7 @@ public class ManageStudentForm extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextFieldPhone)
                             .addComponent(jTextFieldYear)
-                            .addComponent(dateChooserCombo, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
+                            .addComponent(dateChooserCombo, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jComboBoxGrade, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))))
@@ -668,7 +671,7 @@ public class ManageStudentForm extends javax.swing.JFrame {
         //model = (DefaultTableModel)jTable1.getModel();
         DefaultTableModel dtm2 = (DefaultTableModel)jTable1.getModel();
         dtm2.setDataVector(null, new String [] {
-                "StudentID", "FirstName", "MiddleName", "LastName", "Sex", "Grade", "BirthDate", "Enrolled Year", "Phone", "Address"
+                "StudentID", "FirstName", "LastName", "StudentNum", "Sex", "Grade", "BirthDate", "Enrolled Year", "Phone", "Address"
             });
 //        jTable1.setModel(new DefaultTableModel(null,
 //            new String [] {

@@ -47,7 +47,7 @@ public class studentData {
     public static boolean insertData(Student s) {
         try {
             //String firstName, String middleName, String lastName, char sex, int grade, Calendar birthday, int year, String phoneNum, String add
-            String sql = "INSERT INTO jnflsic_sch_info.ic_student (stuID, first_name, middle_name, last_name, sex, birthdate, grade, enrollYear, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+            String sql = "INSERT INTO jnflsic_sch_info.ic_student (stuID, first_name, middle_name, StudentNum, sex, birthdate, grade, enrollYear, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
             Connection con = connectDatabase.getConnection();
             PreparedStatement ps;
             
@@ -90,7 +90,7 @@ public class studentData {
     public static boolean updateData(Student s){
         try {
             //String firstName, String middleName, String lastName, char sex, int grade, Calendar birthday, int year, String phoneNum, String add
-            String sql = "UPDATE jnflsic_sch_info.ic_student SET stuID = ?, first_name = ?, middle_name = ?, last_name = ?, sex = ?, birthdate = ?, grade = ?, enrollYear = ?, phone = ?, address = ? WHERE stuID = ?;";
+            String sql = "UPDATE jnflsic_sch_info.ic_student SET stuID = ?, first_name = ?, middle_name = ?, StudentNum = ?, sex = ?, birthdate = ?, grade = ?, enrollYear = ?, phone = ?, address = ? WHERE stuID = ?;";
             
             Connection con = connectDatabase.getConnection();
             PreparedStatement ps;

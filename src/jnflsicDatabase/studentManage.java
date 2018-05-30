@@ -19,11 +19,11 @@ public class studentManage {
        
         try {
             //String firstName, String middleName, String lastName, char sex, int grade, Calendar birthday, int year, String phoneNum, String add
-            String sql = "Select stuID, first_name, middle_name, last_name, sex, birthdate, grade, enrollYear, phone, address FROM jnflsic_sch_info.ic_student";
+            String sql = "Select stuID, first_name, middle_name, StudentNum, sex, birthdate, grade, enrollYear, phone, address FROM jnflsic_sch_info.ic_student";
 
             String where="";
             if(!keyword.equals("")){
-                where = " where (first_name like '%"+keyword+"%' or middle_name like '%"+keyword+"%' or last_name like '%"+keyword+"%')";
+                where = " where (first_name like '%"+keyword+"%' or middle_name like '%"+keyword+"%' or StudentNum like '%"+keyword+"%')";
                 if(year!=0){
                     String year1=String.valueOf(year);
                     if (year1.length()!=4){
